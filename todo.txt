@@ -1,0 +1,4 @@
+TODO Vagrant:
+
+Try vagrant upping again, now that sandboxing should be configured.
+What is cabalinstall?

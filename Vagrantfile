@@ -17,7 +17,7 @@ Vagrant.configure(2) do |config|
   config.vm.provider "virtualbox" do |v|
       v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
       v.customize ["modifyvm", :id, "--natdnsproxy1", "on"]
-      v.memory = 1024
+      v.memory = 2048
   end
 
   # Disable automatic box update checking. If you disable this, then
@@ -54,7 +54,7 @@ Vagrant.configure(2) do |config|
   #   vb.gui = true
   #
   #   # Customize the amount of memory on the VM:
-  #   vb.memory = "1024"
+  #   vb.memory = "2048"
   # end
   #
   # View the documentation for the provider you are using for more
@@ -76,6 +76,8 @@ Vagrant.configure(2) do |config|
     cd /vagrant
     wget http://www.stackage.org/lts/cabal.config
     sudo cabal update
+    sudo cabal install cabal
+    sudo cabal sandbox init
     sudo cabal install alex happy yesod-bin
   SHELL
 end

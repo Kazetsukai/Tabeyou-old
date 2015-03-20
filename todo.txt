@@ -1,4 +1,4 @@
-TODO Vagrant:
+TODO Tabeyou:
 
-Try vagrant upping again, now that sandboxing should be configured.
-What is cabalinstall?
+Vagrant should basically be working now.
+Confirm that yesod will spin up, and maybe add yesod to the provisioning commands?

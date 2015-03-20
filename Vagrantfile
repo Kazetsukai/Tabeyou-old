@@ -72,12 +72,30 @@ Vagrant.configure(2) do |config|
   # documentation for more information about their specific syntax and use.
   config.vm.provision "shell", inline: <<-SHELL
     sudo apt-get update
-    sudo apt-get install -y haskell-platform build-essential zlib1g-dev libpg-dev
-    cd /vagrant
-    wget http://www.stackage.org/lts/cabal.config
-    sudo cabal update
-    sudo cabal install cabal
-    sudo cabal sandbox init
-    sudo cabal install alex happy yesod-bin
+    sudo apt-get install -y software-properties-common
+    sudo add-apt-repository -y ppa:hvr/ghc
+    sudo apt-get update
+    sudo apt-get install -y cabal-install-1.20 ghc-7.8.4 build-essential zlib1g-dev
+    cd /vagrant/Tabeyou
+    wget -N http://www.stackage.org/lts/cabal.config
+  SHELL
+  config.vm.provision :shell, :inline => "echo PATH $PATH"
+  config.vm.provision :shell, :inline => "[ -f ~/.profile ] || touch ~/.profile"
+
+  config.vm.provision :shell, :inline => "[ -f ~/.bash_profile ] || touch ~/.bash_profile"
+
+  config.vm.provision :shell, :inline => "grep 'PATH=/home/vagrant/.cabal/bin:/opt/cabal/1.20/bin:/opt/ghc/7.8.4/bin' ~/.profile || echo 'export PATH=/home/vagrant/.cabal/bin:/opt/cabal/1.20/bin:/opt/ghc/7.8.4/bin:$PATH' | tee -a ~/.profile"
+
+  config.vm.provision :shell, :inline => "grep 'PATH=/home/vagrant/.cabal/bin:/opt/cabal/1.20/bin:/opt/ghc/7.8.4/bin' ~/.bash_profile || echo 'export PATH=/home/vagrant/.cabal/bin:/opt/cabal/1.20/bin:/opt/ghc/7.8.4/bin:$PATH' | tee -a ~/.bash_profile"
+  config.vm.provision :shell, :inline => ". ~/.profile"
+
+  config.vm.provision :shell, :inline => ". ~/.bash_profile"
+  config.vm.provision :shell, :inline => "echo PATH $PATH"
+
+  config.vm.provision "shell", inline: <<-SHELL
+    cabal update
+    cabal install alex happy yesod-bin
+    cabal sandbox init
+    cabal install
   SHELL
 end

@@ -28,7 +28,7 @@ Vagrant.configure(2) do |config|
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
   # accessing "localhost:8080" will access port 80 on the guest machine.
-  # config.vm.network "forwarded_port", guest: 80, host: 8080
+  config.vm.network "forwarded_port", guest: 3000, host: 3000
 
   # Create a private network, which allows host-only access to the machine
   # using a specific IP.
@@ -76,7 +76,7 @@ Vagrant.configure(2) do |config|
     sudo add-apt-repository -y ppa:hvr/ghc
     sudo apt-get update
     sudo apt-get install -y cabal-install-1.20 ghc-7.8.4 build-essential zlib1g-dev
-    cd /vagrant/Tabeyou
+    cd /vagrant
     wget -N http://www.stackage.org/lts/cabal.config
   SHELL
   config.vm.provision :shell, :inline => "echo PATH $PATH"
@@ -84,19 +84,24 @@ Vagrant.configure(2) do |config|
 
   config.vm.provision :shell, :inline => "[ -f ~/.bash_profile ] || touch ~/.bash_profile"
 
-  config.vm.provision :shell, :inline => "grep 'PATH=/home/vagrant/.cabal/bin:/opt/cabal/1.20/bin:/opt/ghc/7.8.4/bin' ~/.profile || echo 'export PATH=/home/vagrant/.cabal/bin:/opt/cabal/1.20/bin:/opt/ghc/7.8.4/bin:$PATH' | tee -a ~/.profile"
+  config.vm.provision :shell, :inline => "grep 'PATH=~/.cabal/bin:/opt/cabal/1.20/bin:/opt/ghc/7.8.4/bin:/vagrant/.cabal-sandbox/bin' ~/.profile || echo 'export PATH=~/.cabal/bin:/opt/cabal/1.20/bin:/opt/ghc/7.8.4/bin:/vagrant/.cabal-sandbox/bin:$PATH' | tee -a ~/.profile"
 
-  config.vm.provision :shell, :inline => "grep 'PATH=/home/vagrant/.cabal/bin:/opt/cabal/1.20/bin:/opt/ghc/7.8.4/bin' ~/.bash_profile || echo 'export PATH=/home/vagrant/.cabal/bin:/opt/cabal/1.20/bin:/opt/ghc/7.8.4/bin:$PATH' | tee -a ~/.bash_profile"
+  config.vm.provision :shell, :inline => "grep 'PATH=~/.cabal/bin:/opt/cabal/1.20/bin:/opt/ghc/7.8.4/bin:/vagrant/.cabal-sandbox/bin' ~/.bash_profile || echo 'export PATH=~/.cabal/bin:/opt/cabal/1.20/bin:/opt/ghc/7.8.4/bin:/vagrant/.cabal-sandbox/bin:$PATH' | tee -a ~/.bash_profile"
   config.vm.provision :shell, :inline => ". ~/.profile"
 
   config.vm.provision :shell, :inline => ". ~/.bash_profile"
   config.vm.provision :shell, :inline => "echo PATH $PATH"
+  
+  config.vm.provision :shell, :inline => "grep 'PATH=~/.cabal/bin:/opt/cabal/1.20/bin:/opt/ghc/7.8.4/bin:/vagrant/.cabal-sandbox/bin' /home/vagrant/.profile || echo 'export PATH=~/.cabal/bin:/opt/cabal/1.20/bin:/opt/ghc/7.8.4/bin:/vagrant/.cabal-sandbox/bin:$PATH' | tee -a /home/vagrant/.profile"
+
+  config.vm.provision :shell, :inline => "grep 'PATH=~/.cabal/bin:/opt/cabal/1.20/bin:/opt/ghc/7.8.4/bin:/vagrant/.cabal-sandbox/bin' /home/vagrant/.bash_profile || echo 'export PATH=~/.cabal/bin:/opt/cabal/1.20/bin:/opt/ghc/7.8.4/bin:/vagrant/.cabal-sandbox/bin:$PATH' | tee -a /home/vagrant/.bash_profile"
 
   config.vm.provision "shell", inline: <<-SHELL
-    cd /vagrant/Tabeyou
+    cd /vagrant
     cabal update
-    cabal install alex happy yesod-bin
+    cabal sandbox delete
     cabal sandbox init
+    cabal install alex happy yesod-bin
     cabal install
   SHELL
 end

@@ -10,6 +10,7 @@ cabal-dev
 cabal.sandbox.config
 cabal.config
 cabal.config*
+static/tmp/
 
 .vagrant
 
@@ -61,3 +62,5 @@ $RECYCLE.BIN/
 *.msp
 *.sublime-workspace
 yesod-devel/arargs.txt
+Tabeyou.sqlite3
+yesod-devel/devel-terminate

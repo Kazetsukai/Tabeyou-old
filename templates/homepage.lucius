@@ -10,7 +10,8 @@ h1 {
 section {
 	margin: 20px;
 	padding: 20px;
-	border: 1px red solid;
+	border: 3px red solid;
+	border-radius: 10px;
 }
 
 section > h2 {

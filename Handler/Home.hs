@@ -21,6 +21,12 @@ getHomeR = do
         setTitle "Tabeyou!"
         $(widgetFile "homepage")
 
+getProductsR :: Handler String
+getProductsR = do
+	products <- runDB $ selectList [] [Asc ProductName]
+	return $ show products
+
+
 -- postHomeR :: Handler Html
 -- postHomeR = do
 --     ((result, formWidget), formEnctype) <- runFormPost sampleForm

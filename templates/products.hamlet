@@ -1,0 +1,10 @@
+
+<h1>_{MsgTabeyou}
+
+<section>
+  <h2>Products
+
+<section>
+  <div>
+    $forall Entity pid p <- products
+      <div>#{productName p}

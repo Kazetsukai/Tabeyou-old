@@ -21,10 +21,11 @@ getHomeR = do
         setTitle "Tabeyou!"
         $(widgetFile "homepage")
 
-getProductsR :: Handler String
+getProductsR :: Handler Html
 getProductsR = do
 	products <- runDB $ selectList [] [Asc ProductName]
-	return $ show products
+	defaultLayout $ do
+		$(widgetFile "products")
 
 
 -- postHomeR :: Handler Html

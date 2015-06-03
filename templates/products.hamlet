@@ -5,6 +5,9 @@
   <h2>Products
 
 <section>
-  <div>
+  <div class="cf">
     $forall Entity pid p <- products
-      <div>#{productName p}
+      <div class="product">
+        <div class="productName">#{productName p}
+        $maybe price <- productPrice p
+          <div class="price">$#{price}

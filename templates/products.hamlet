@@ -7,7 +7,8 @@
 <section>
   <div class="cf">
     $forall Entity pid p <- products
-      <div class="product">
-        <div class="productName">#{productName p}
-        $maybe price <- productPrice p
-          <div class="price">$#{price}
+      $maybe price <- productPrice p
+        <a href="https://tabeyou.foxycart.com/cart?name=#{productName p}&price=#{price}">
+          <div class="product">
+            <div class="productName">#{productName p}
+            <div class="price">$#{price}

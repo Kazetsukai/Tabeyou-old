@@ -27,6 +27,12 @@ getProductsR = do
 	defaultLayout $ do
 		$(widgetFile "products")
 
+getTransactionsR :: Handler Html
+getTransactionsR = do
+    let transactions = [("lol" :: Text, 20 :: Int), ("cool" :: Text, 50 :: Int)]
+    defaultLayout $ do
+        $(widgetFile "transactions")
+
 
 -- postHomeR :: Handler Html
 -- postHomeR = do

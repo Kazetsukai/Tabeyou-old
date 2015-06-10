@@ -6,3 +6,4 @@
 
 / HomeR GET
 /products ProductsR GET
+/transactions TransactionsR GET

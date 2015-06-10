@@ -2,6 +2,7 @@ Default: &defaults
   host: "*4" # any IPv4 host
   port: 3000
   copyright: Insert copyright statement here
+  foxyCartApiKey: THIS_IS_A_KEY_FOR_TESTING
   #analytics: UA-YOURCODE
 
 Development:

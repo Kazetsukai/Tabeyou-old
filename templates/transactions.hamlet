@@ -1,0 +1,11 @@
+
+<h1>_{MsgTabeyou}
+
+<section>
+  <h2>Transactions
+
+<section>
+  <div class="cf">
+    $forall (name, price) <- transactions
+      <div>#{name}
+      <div>#{price}

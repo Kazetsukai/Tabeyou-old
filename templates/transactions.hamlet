@@ -6,6 +6,4 @@
 
 <section>
   <div class="cf">
-    $forall (name, price) <- transactions
-      <div>#{name}
-      <div>#{price}
+    <div>#{transactions}

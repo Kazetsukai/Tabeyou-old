@@ -5,6 +5,9 @@ import Import
 import Yesod.Form.Bootstrap3
     ( BootstrapFormLayout (..), renderBootstrap3, withSmallInput )
 
+import Network.HTTP.Conduit
+import Data.Text.Lazy.Encoding
+
 -- This is a handler function for the GET request method on the HomeR
 -- resource pattern. All of your resource patterns are defined in
 -- config/routes
@@ -29,7 +32,13 @@ getProductsR = do
 
 getTransactionsR :: Handler Html
 getTransactionsR = do
-    let transactions = [("lol" :: Text, 20 :: Int), ("cool" :: Text, 50 :: Int)]
+    initReq <- parseUrl "https://tabeyou.foxycart.com/api"
+    let req = (flip urlEncodedBody) initReq $ 
+                [("test","lol")
+                ,("api_token","lol")]
+
+    response <- withManager $ httpLbs req
+    let transactions = decodeUtf8 $ responseBody response
     defaultLayout $ do
         $(widgetFile "transactions")
 

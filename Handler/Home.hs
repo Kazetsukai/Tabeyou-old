@@ -2,11 +2,14 @@
 module Handler.Home where
 
 import Import
+import Foundation (getExtra)
 import Yesod.Form.Bootstrap3
     ( BootstrapFormLayout (..), renderBootstrap3, withSmallInput )
 
 import Network.HTTP.Conduit
-import Data.Text.Lazy.Encoding
+import Data.Text.Lazy.Encoding as L
+import Data.Text.Encoding as S
+import Text.XML
 
 -- This is a handler function for the GET request method on the HomeR
 -- resource pattern. All of your resource patterns are defined in
@@ -33,12 +36,13 @@ getProductsR = do
 getTransactionsR :: Handler Html
 getTransactionsR = do
     initReq <- parseUrl "https://tabeyou.foxycart.com/api"
+    token <- fmap (S.encodeUtf8 . extraFoxyCartApiKey) getExtra
     let req = (flip urlEncodedBody) initReq $ 
-                [("test","lol")
-                ,("api_token","lol")]
+                [("api_action","transaction_list")
+                ,("api_token", token)]
 
     response <- withManager $ httpLbs req
-    let transactions = decodeUtf8 $ responseBody response
+    let transactions = parseLBS_ def $ responseBody response
     defaultLayout $ do
         $(widgetFile "transactions")
 

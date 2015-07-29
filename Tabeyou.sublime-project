@@ -2,8 +2,10 @@
 	"folders":
 	[
 		{
-			"follow_symlinks": true,
 			"path": "."
+		},
+		{
+			"path": "C:\\Users\\Zapman\\Downloads\\materialize-v0.97.0\\materialize\\font"
 		}
 	]
 }

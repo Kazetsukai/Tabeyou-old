@@ -3,11 +3,8 @@ module Handler.Home where
 
 import Import
 import Foundation (getExtra)
-import Yesod.Form.Bootstrap3
-    ( BootstrapFormLayout (..), renderBootstrap3, withSmallInput )
 
 import Network.HTTP.Conduit
-import Data.Text.Lazy.Encoding as L
 import Data.Text.Encoding as S
 import Text.XML
 

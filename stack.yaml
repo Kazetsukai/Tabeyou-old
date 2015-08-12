@@ -1,0 +1,8 @@
+extra-deps: []
+resolver: lts-2.22
+flags:
+  Tabeyou:
+    dev: false
+    library-only: false
+packages:
+- '.'

@@ -2,9 +2,8 @@
 module Handler.Home where
 
 import Import
-import Foundation (getExtra)
+import Foundation (appSettings)
 
-import Network.HTTP.Conduit
 import Data.Text.Encoding as S
 import Text.XML
 
@@ -32,8 +31,9 @@ getProductsR = do
 
 getTransactionsR :: Handler Html
 getTransactionsR = do
+    master <- getYesod
     initReq <- parseUrl "https://tabeyou.foxycart.com/api"
-    token <- fmap (S.encodeUtf8 . extraFoxyCartApiKey) getExtra
+    let token = S.encodeUtf8 $ appFoxyCartApiKey $ appSettings master
     let req = (flip urlEncodedBody) initReq $ 
                 [("api_action","transaction_list")
                 ,("api_token", token)]

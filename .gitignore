@@ -1,69 +1,15 @@
-dist
-cabal-dev
-*.o
-*.hi
-*.chi
-*.chs.h
-.virtualenv
-.hsenv
-.cabal-sandbox/
-cabal.sandbox.config
-cabal.config
-cabal.config*
+dist*
 static/tmp/
-
-.vagrant
-
-# =========================
-# Operating System Files
-# =========================
-
-# OSX
-# =========================
-
+static/combined/
+config/client_session_key.aes
+*.hi
+*.o
+*.sqlite3
+.hsenv*
+cabal-dev/
+yesod-devel/
+.cabal-sandbox
+cabal.sandbox.config
 .DS_Store
-.AppleDouble
-.LSOverride
-
-# Icon must end with two \r
-Icon
-
-# Thumbnails
-._*
-
-# Files that might appear on external disk
-.Spotlight-V100
-.Trashes
-
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
-
-# Windows
-# =========================
-
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
-
-# Folder config file
-Desktop.ini
-
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
-
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
-*.sublime-workspace
-yesod-devel/arargs.txt
-Tabeyou.sqlite3
-yesod-devel/devel-terminate
-yesod-devel/ghcargs.txt
-yesod-devel/ghcargs.txt
-Tabeyou.sublime-workspace
+*.swp
+.stack-work/

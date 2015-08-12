@@ -1,4 +1,0 @@
-TODO Tabeyou:
-
-Vagrant should basically be working now.
-Confirm that yesod will spin up, and maybe add yesod to the provisioning commands?

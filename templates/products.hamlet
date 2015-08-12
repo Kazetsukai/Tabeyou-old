@@ -9,6 +9,6 @@
     $forall Entity pid p <- products
       $maybe price <- productPrice p
         <a href="https://tabeyou.foxycart.com/cart?name=#{productName p}&price=#{price}">
-          <div class="product">
+          <div class="product z-depth-1 hoverable">
             <div class="productName">#{productName p}
             <div class="price">$#{price}

@@ -1,0 +1,255 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 588.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"file",
+				"File: Close All"
+			]
+		],
+		"width": 600.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"shell",
+			"clear",
+			"clr",
+			"cls",
+			"test",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/Zapman/Documents/GitHub/Tabeyou"
+	],
+	"file_history":
+	[
+		"/C/Users/Zapman/Documents/GitHub/Tabeyou/Tabeyou.sublime-project",
+		"/C/Users/Zapman/Desktop/healthynzprices.csv",
+		"/C/Users/Zapman/Documents/GitHub/Tabeyou/Foundation.hs",
+		"/C/Users/Zapman/Documents/GitHub/Tabeyou/Settings.hs",
+		"/C/Users/Zapman/Documents/GitHub/Tabeyou/messages/en.msg",
+		"/C/Users/Zapman/Documents/GitHub/Tabeyou/config/settings.yml",
+		"/C/Users/Zapman/Documents/GitHub/Tabeyou/templates/homepage.hamlet",
+		"/C/Users/Zapman/Documents/GitHub/Tabeyou/Handler/Home.hs",
+		"/C/Users/Zapman/Documents/GitHub/TabeyouBack/Application.hs",
+		"/C/Users/Zapman/Documents/GitHub/Tabeyou/Application.hs",
+		"/C/Users/Zapman/Documents/GitHub/Tabeyou/templates/default-layout-wrapper.hamlet",
+		"/C/Users/Zapman/Documents/GitHub/Tabeyou/Tabeyou.cabal",
+		"/C/Users/Zapman/Documents/GitHub/TabeyouBack/config/routes",
+		"/C/Users/Zapman/Documents/GitHub/Tabeyou/config/routes",
+		"/C/Users/Zapman/AppData/Roaming/Sublime Text 3/Packages/User/Haskell.sublime-settings",
+		"/C/Users/Zapman/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/Zapman/Documents/GitHub/Tabeyou/Model.hs",
+		"/C/Users/Zapman/Documents/GitHub/TabeyouBack/messages/en.msg",
+		"/C/Users/Zapman/Documents/GitHub/akshfjb/kjsdfh/Foundation.hs",
+		"/C/Users/Zapman/Documents/GitHub/TabeyouBack/templates/homepage.hamlet",
+		"/C/Users/Zapman/Documents/GitHub/TabeyouBack/Foundation.hs",
+		"/C/Users/Zapman/Documents/GitHub/akshfjb/kjsdfh/templates/homepage.julius",
+		"/C/Users/Zapman/Documents/GitHub/akshfjb/kjsdfh/templates/homepage.lucius",
+		"/C/Users/Zapman/Documents/GitHub/akshfjb/kjsdfh/templates/default-layout.hamlet",
+		"/C/Users/Zapman/Documents/GitHub/TabeyouBack/config/settings.yml",
+		"/C/Users/Zapman/Documents/GitHub/akshfjb/kjsdfh/templates/default-layout-wrapper.hamlet",
+		"/C/Users/Zapman/Documents/GitHub/akshfjb/kjsdfh/templates/homepage.hamlet",
+		"/C/Users/Zapman/Documents/GitHub/TabeyouBack/templates/default-layout-wrapper.hamlet",
+		"/C/Users/Zapman/Documents/GitHub/Tabeyou/Import.hs",
+		"/C/Users/Zapman/Documents/GitHub/operation-bad-pony/BadPony/BadPony.WebApiHost/BadPony.WebApiHost.csproj",
+		"/C/Users/Zapman/Documents/GitHub/operation-bad-pony/BadPony/BadPony.WebApiHost/public/assets/js/app.js.bundle",
+		"/C/Users/KURO/Downloads/frontvm3-20060623/README",
+		"/K/Frontier/EliteDangerous/Products/FORC-FDEV-D-1002/Win32/Shared/StellarForge/Galaxies/MilkyWay/MilkyWay.ovl",
+		"/K/Frontier/EliteDangerous/Products/FORC-FDEV-D-1002/Win32/Astro/Astro.ovl",
+		"/K/StarCitizen/Launcher/Launcher.version",
+		"/C/Users/KURO/Documents/MailExport/list.txt",
+		"/C/Users/KURO/Documents/GitHub/Survival/Unity/Assets/Main.unity",
+		"/C/Users/KURO/Documents/test.hs",
+		"/K/StarCitizen/CitizenClient/Data.version",
+		"/K/TorrentDownload/adobe/core.nfo",
+		"/C/Windows/System32/drivers/etc/hosts",
+		"/K/TorrentDownload/adobe/scc.nfo",
+		"/K/Haskell/Tabeyou/Tabeyou.cabal",
+		"/K/Haskell/Tabeyou/Site.hs",
+		"/K/Haskell/Tabeyou/Setup.hs",
+		"/K/Haskell/Tabeyou/cabal.sandbox.config",
+		"/K/Haskell/Site/site.hs"
+	],
+	"find":
+	{
+		"height": 31.0
+	},
+	"find_in_files":
+	{
+		"height": 138.0,
+		"where_history":
+		[
+			"C:\\Users\\Zapman\\Documents\\GitHub\\TabeyouBack",
+			"C:\\Users\\Zapman\\Documents\\GitHub\\Tabeyou"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"master",
+			"MsgTabeyou",
+			"appCopyright",
+			"(^.*)- (.*) - (2.*)\\.eml",
+			",",
+			"(^.*)- (.*) - (2.*)\\.eml",
+			"(^.+) - (.+) - (2.+)\\.eml",
+			","
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"$1, $2, $3",
+			" ",
+			"$1, $2, $3",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 142.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.haskell_sublime_load":
+	{
+		"height": 100.0
+	},
+	"pinned_build_system": "",
+	"project": "Tabeyou.sublime-project",
+	"replace":
+	{
+		"height": 58.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 246.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

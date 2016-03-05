@@ -7,18 +7,54 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "Foundation.hs",
+			"settings":
+			{
+				"buffer_size": 6183,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "templates/default-layout.hamlet",
+			"settings":
+			{
+				"buffer_size": 979,
+				"line_ending": "Windows"
+			}
+		}
 	],
-	"build_system": "",
+	"build_system": "Packages/User/HaskellStack.sublime-build",
 	"build_system_choices":
 	[
+		[
+			[
+				[
+					"Packages/Haskell/Haskell.sublime-build",
+					""
+				],
+				[
+					"Packages/User/HaskellStack.sublime-build",
+					""
+				]
+			],
+			[
+				"Packages/User/HaskellStack.sublime-build",
+				""
+			]
+		]
 	],
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 588.0,
-		"last_filter": "",
+		"height": 151.0,
+		"last_filter": "haskell",
 		"selected_items":
 		[
+			[
+				"haskell",
+				"Set Syntax: Haskell"
+			],
 			[
 				"insta",
 				"Package Control: Install Package"
@@ -58,10 +94,16 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/Zapman/Documents/GitHub/Tabeyou"
+		"/C/Users/Zapman/Documents/GitHub/Tabeyou",
+		"/C/Users/Zapman/Documents/GitHub/Tabeyou/Handler",
+		"/C/Users/Zapman/Documents/GitHub/Tabeyou/static",
+		"/C/Users/Zapman/Documents/GitHub/Tabeyou/static/js",
+		"/C/Users/Zapman/Documents/GitHub/Tabeyou/static/tmp",
+		"/C/Users/Zapman/Documents/GitHub/Tabeyou/templates"
 	],
 	"file_history":
 	[
+		"/C/Users/Zapman/Documents/GitHub/Tabeyou/static/css/materialize.min.css",
 		"/C/Users/Zapman/Documents/GitHub/Tabeyou/Tabeyou.sublime-project",
 		"/C/Users/Zapman/Desktop/healthynzprices.csv",
 		"/C/Users/Zapman/Documents/GitHub/Tabeyou/Foundation.hs",
@@ -128,6 +170,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"class=\"",
+			"</div>",
+			"</span>",
+			"</a>",
 			"master",
 			"MsgTabeyou",
 			"appCopyright",
@@ -157,8 +203,67 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "Foundation.hs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6183,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2833,
+								2833
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Haskell/Haskell.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1144.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "templates/default-layout.hamlet",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 979,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								938,
+								938
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Haskell/Haskell.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -247,7 +352,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 246.0,
+	"side_bar_width": 455.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
